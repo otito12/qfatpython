@@ -1,6 +1,6 @@
 class ZeroCouponBond:
 
-    def __init__(self, principal: int, maturity: int, interest_rate: int):
+    def __init__(self, principal: float, maturity: float, interest_rate: float):
         self.principal = principal
         self.maturity = maturity
         self.interest_rate = interest_rate / 100
@@ -14,4 +14,4 @@ class ZeroCouponBond:
 
 if __name__ == "__main__":
     z_bond = ZeroCouponBond(principal=1000, maturity=2, interest_rate=4)
-    print(z_bond.calculate_price())
+    print("{}".format(round(z_bond.calculate_price(), 2)))
